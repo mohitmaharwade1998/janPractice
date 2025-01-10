@@ -1,2 +1,120 @@
+<p style="color: cadetblue;font-size: 30px;">user works!</p>
+<br>
+
+<!-- <input type="text" #inputbox   > : enter name here
+<button (click)="myFunction(inputbox.value)">click</button> <br> 
+value:={{inputValue}}  -->
+<br><br>
+
+ <input type="text" #inputbox (keyup)="myFunction(inputbox.value)" > : enter name here
+value:={{inputValue}} 
+
+<br>
+
+<div (mouseover)="func('mouse')">
+ mouse over
+</div>
+
+<!-- ................................................................ -->
+
+<br><br>
 <p>user works!</p>
-hjk
+<h1>header</h1>
+
+
+
+
+<input type="text" #inputBox>Enter name..
+<!-- #inputBox ye id declare kiye hai -->
+<button (click)="myfunction(inputBox.value)">click</button>
+user input value:{{inputBoxvalue}}
+
+<br><br>
+
+<input type="text" #address>enter address
+<button (click)="add(address.value)">dab re</button>
+enter address:{{adrres}}
+<br><br>
+
+ <input type="text" #myname (keypress)="myname1(myname.value)" (blur)="blurEvent()"> enter myname <br>
+enter myname:{{abcd}} 
+
+<br> <br>
+<!-- <input type="text" #myname (keydown)="myname1(myname.value)"> enter myname
+<button (click)="myname1(myname.value)">aaa</button>
+enter nyname:{{abcd}} -->
+<br> <br>
+
+<!-- 
+ <input type="text" #myname (focus)="myname1(myname.value)"> enter myname
+
+enter nyname:{{abcd}}  -->
+
+
+
+<!--another concept through-->
+<input type="text"  (keyup)="mm($event)">
+enter mmmmm::{{mmm}}
+
+<br> <br>
+
+<div
+    (mouseover)="over('mouse')"style="height:100px;width:100px;color:red">
+hye mohit
+</div>
+
+
+<div
+(mousedown)="over1()" style="color: aqua;">
+hey buddy
+</div>
+<!--mousedowm me click krenge tab hi trigger hoga ye-->
+
+<!-- <div (mouseleave)="out()" style="color:blue" >
+    mmmmm
+</div> -->
+
+{{arrayItem}} <br><br>
+{{obj.name}} {{obj.age}}
+<br>
+
+
+<input type="checkbox" (change)="checkboxevent()"> item  <br><br>
+<!--checkbox me hamesha change event rhta hai-->
+
+<input type="checkbox" value="item_1" (change)="checkbox($event)"> item 1  <br><br>
+<input type="checkbox" value="item_3" (change)="checkbox2($event.target)"> item 2  <br><br>
+<input type="checkbox" value="item_2" (change)="checkbox1($event)">item 3
+
+<br>
+
+{{checkboxvalue}} <br>
+{{checkvalue}}
+
+
+
+<!-- 
+<br><br>
+<input type="text" #abcde (keyup)="oo($event)">enter ooo
+<button (click)="oo(abcde.value)">oo</button>
+{{oop}} -->
+
+<!-- <div (mouseover)="ppp()" style="color:green">
+dfghjk ffgdfgerfdg
+</div>
+ -->
+
+
+ <!-- <input type="checkbox" (click)="name1()">eneter name -->
+
+ <input type="checkbox" value="999" (change)="check1($event)"> item9  <br><br>
+
+ <input type="checkbox" value="mohit bhai" (change)="mohit($event.target)"> mohit bhai <br>
+
+ {{sss}} ::sss <br>
+{{mo}}::  mo
+
+<br>
+coppy item:{{arrayItemCopy}}
+<br>
+hetro:{{ arryaHetro}}

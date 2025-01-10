@@ -1,0 +1,22 @@
+<p>aaa works!</p>
+
+<button (click)="getstudentname()">getstudent</button> <br>
+{{studentname}} <br><br>
+
+<button (click)="setstudentname()">seetstudent</button> <br><br>
+
+<button (click)="mul()">mul</button><br>
+
+<input type="text" [(ngModel)]="inputvalue">
+<table>
+    <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>salary</th>
+</tr>
+<tr *ngFor="let arrayitem of array | search:inputvalue ">
+    <td>{{arrayitem.name}}</td>
+    <td>{{arrayitem.age}}</td>
+    <td>{{arrayitem.sal}}</td>
+</tr>
+</table>

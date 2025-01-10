@@ -1,0 +1,38 @@
+<p>databinding works!</p>
+
+<!-- databinding there is 2 type->one way and two way databinding -->
+
+{{data}} <br> <!--  string interpolsation (ts file to html file)-->
+{{disabledvalue}}<!-- we can pass property--> <br>
+{{test()}} <!-- we can pass function-->  <br>
+{{12+66}} <!-- we can  perform arithmetic operation-->  <br>
+{{no == 70}} <!-- we can  check equality oprator-->  <br>
+<!--{{no = 70}}  we can  not assign value to the propert in string interpolation-->  <br>
+<!--{{typeOf(no)}} it is no possible-->
+<!--{{no++}} inc and dec is not possible in string interpolation-->
+
+
+<!--property bind can handle disable attribute but interpolation can't -->
+
+<br>
+ <input type="text" value="mohit"><!-- //normal way to display value initialy.. -->
+<br><br>
+ <input type="text" value="myName"> <br>
+ <input type="text" [value]="myName"><br>
+ <input type="text" value="{{myName}}"> <br><br>
+
+ <input type="text" [disabled]="disabledvalue" value="mmmm"> <br>
+ <input type="text" disabled={{disabledvalue}} value="mohit"> <br>
+ <!-- <input type="text" [disabled]="{{disabledvalue}}"> -->
+  <input type="text" disabled> <br><br>
+
+  <!--for two way databinding we use ngModel directive so we need to import formsModule 
+  in import section app.module.ts file -->
+
+  <input type="text" [(ngModel)]="surName"> <br>
+  {{surName}} <br>
+  {{test2()}} <br><br>
+
+  <input type="text" [(ngModel)]="name" placeholder="enter details"> <br>
+  {{name}} <br>
+  {{test2()}}

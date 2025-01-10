@@ -1,0 +1,52 @@
+<p>form works!</p>
+<form action="">
+   Enter Your fisrt Name: <input type="text" appCharactoronly> <br>
+   enter your last name <input type="text" appCharactoronly> <br>
+   enter mobile no : <input type="text" appNumberonly>
+</form>
+
+<!-- pipes -->
+
+<h2>{{title | uppercase}}</h2>
+{{title | lowercase}} <br>
+{{title| titlecase}} <br>
+{{todayDate | date}} <br>
+{{todayDate | date:'MM/dd/yyyy'}} <br>
+{{today}} <br>
+{{today1}} <br>
+{{today2}} <br>
+{{today3}} .. <br>
+{{day}} <br>
+{{Month}}<br>
+{{year}} <br>
+{{day+'-'+Month+'-'+year}} <br>
+{{date}}
+
+<br>
+
+
+<form action="">
+
+   <input type="text" [(ngModel)]="inputboxValue" [ngModelOptions]="{standalone:true}">
+   <!-- it will optional if element not show..and if we  not
+    use form inside then not neccsary[ngModelOptions]="{standalone:true}" -->
+   <table>
+      <tr>
+         <th>Name</th>
+         <th>age</th>
+         <th>sal</th>
+      </tr>
+      <tr *ngFor="let empdata of employee | searchText:inputboxValue">
+         <td>{{empdata.name}}</td>
+         <td> {{empdata.age}}</td>
+         <td> {{empdata.salary}}</td>
+      </tr>
+   </table>
+<br><br>
+
+<input type="text" placeholder="enter ammont" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}">
+&#8377;{{amount |curruncy1 }} <br> <br>
+
+{{4500 | currency: 'INR'}}
+
+</form>
